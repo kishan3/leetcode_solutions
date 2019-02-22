@@ -14,13 +14,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        x=[]
-        import ipdb;ipdb.set_trace()
+        x = []
         for i in range(len(nums)):
             if nums[i] in x:
-                return [i, nums.index(target-nums[i])]
+                return [i, nums.index(target - nums[i])]
             else:
-                x.append(target-nums[i])
-                
-s=Solution()
-s.twoSum([2,7,11,19], 9)
+                x.append(target - nums[i])
+
+
+s = Solution()
+s.twoSum([2, 7, 11, 19], 9)

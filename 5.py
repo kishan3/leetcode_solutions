@@ -5,7 +5,7 @@ class Solution(object):
                 return ['^', '$']
             T = ['^']
             for c in s:
-                T +=  ['#', c]
+                T += ['#', c]
             T += ['#', '$']
             return T
 
@@ -30,4 +30,4 @@ class Solution(object):
             if P[i] > P[max_i]:
                 max_i = i
         start = (max_i - 1 - P[max_i]) / 2
-        return s[start : start + P[max_i]]
+        return s[start: start + P[max_i]]
