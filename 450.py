@@ -6,11 +6,13 @@ Created on Tue Jan  1 11:16:06 2019
 @author: kishan
 """
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution(object):
     def bfsTraversal(self, root):
@@ -19,25 +21,26 @@ class Solution(object):
         while queue:
             x = queue.pop(0)
             result.append(x.val)
-            if x.left:    
+            if x.left:
                 queue.append(x.left)
             if x.right:
                 queue.append(x.right)
         return result
+
     def minValue(self, root):
-        current=root
+        current = root
         while current.left:
-            current=current.left
+            current = current.left
         return current
-        
+
     def deleteNode(self, root, key):
         """
         :type root: TreeNode
         :rtype: TreeNode
         """
         if not root:
-            return 
-        
+            return
+
         if key < root.val:
             root.left = self.deleteNode(root.left, key)
         elif key > root.val:
@@ -56,8 +59,9 @@ class Solution(object):
                 root.val = minVal.val
                 root.right = self.deleteNode(root.right, minVal.val)
         return root
-    
-s=Solution()
+
+
+s = Solution()
 root = TreeNode(1)
 root.left = TreeNode(2)
 root.right = TreeNode(3)

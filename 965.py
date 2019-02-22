@@ -6,11 +6,13 @@ Created on Sun Dec 30 19:27:57 2018
 @author: kishan
 """
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution(object):
     def isUnivalTree(self, root):
