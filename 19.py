@@ -17,7 +17,7 @@ class Solution(object):
         start = dummy
         end = dummy
         count = 0
-        while (count < n):
+        while count < n:
             if end.next:
                 end = end.next
                 count += 1

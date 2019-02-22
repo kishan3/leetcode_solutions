@@ -5,7 +5,9 @@ Created on Thu Jan  3 11:05:14 2019
 
 @author: kishan
 """
-ans=[]
+ans = []
+
+
 def brackets(res, op, cl, N):
     print(res, op, cl)
     if op == N and cl == N:
@@ -13,9 +15,10 @@ def brackets(res, op, cl, N):
         return
     else:
         if op < N:
-            brackets(res+"(", op+1 , cl, N)
+            brackets(res + "(", op + 1, cl, N)
         if cl < op:
-            brackets(res+")", op, cl+1, N)
-        
-brackets("", 0,0,2)
-ans
+            brackets(res + ")", op, cl + 1, N)
+
+
+brackets("", 0, 0, 2)
+print ans
