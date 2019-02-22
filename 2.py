@@ -6,7 +6,8 @@ class ListNode(object):
 
 
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
+    @staticmethod
+    def add_two_numbers(l1, l2):
         """
         :type l1: ListNode
         :type l2: ListNode
@@ -18,7 +19,7 @@ class Solution(object):
         p = l1
         q = l2
 
-        while p != None and q != None:
+        while p is not None and q is not None:
             digit = p.val + q.val
 
             curr.next = ListNode(carry + (digit % 10))

@@ -1,6 +1,7 @@
 class Solution(object):
 
-    def median(self, arr, length):
+    @staticmethod
+    def median(arr, length):
         if length == 0:
             return -1
         if length % 2 == 0:
